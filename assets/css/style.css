@@ -1514,6 +1514,11 @@ ul { list-style: none; }
   margin-right: 0.4rem;
   animation: pulse 2s ease infinite;
 }
+.proj-status-dot.offline {
+  background: var(--text-3);
+  box-shadow: none;
+  animation: none;
+}
 .proj-sidebar-row {
   display: flex;
   flex-direction: column;
