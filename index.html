@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rispo — Websites · Workflows · Automations</title>
+  <meta name="description" content="I build websites that convert, workflows that scale, and automations that never sleep. Custom code. Zero templates." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Grid lines -->
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-prompt">~</span>
+      <span class="nav-name">./Rispo</span>
+    </div>
+    <ul class="nav-links" role="list">
+      <li><a href="#about" class="nav-link">about</a></li>
+      <li><a href="#work" class="nav-link">work</a></li>
+      <li><a href="#services" class="nav-link">services</a></li>
+      <li><a href="#process" class="nav-link">process</a></li>
+      <li><a href="#contact" class="nav-cta">let's build →</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span>available for projects</span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="hero-line line-1">I Build</span>
+        <span class="hero-line line-2">
+          <span class="terminal-text" id="terminalText"></span><span class="cursor" id="cursor">_</span>
+        </span>
+        <span class="hero-line line-3">That <em>Work.</em></span>
+      </h1>
+
+      <p class="hero-sub">
+        Custom websites. Intelligent workflows.<br />End-to-end automations. No templates,<br />no drag-and-drop, no compromises.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary" id="heroCta">
+          <span class="btn-text">start a project</span>
+          <span class="btn-arrow">→</span>
+        </a>
+        <a href="#work" class="btn-ghost">view work ↓</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">12+</span>
+          <span class="stat-label">projects shipped</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Hrs saved/week</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">automations running</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <div class="code-window" id="codeWindow">
+        <div class="code-window-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="code-window-title">automate.js</span>
+        </div>
+        <div class="code-body">
+          <pre class="code-content" id="codeContent"></pre>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <div class="badge-ring"></div>
+        <span class="badge-text">Fast · Clean · Scalable</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Next.js</span><span class="mx">·</span>
+      <span>Node.js</span><span class="mx">·</span>
+      <span>Python</span><span class="mx">·</span>
+      <span>n8n</span><span class="mx">·</span>
+      <span>Make</span><span class="mx">·</span>
+      <span>Zapier</span><span class="mx">·</span>
+      <span>REST APIs</span><span class="mx">·</span>
+      <span>WebSockets</span><span class="mx">·</span>
+      <span>PostgreSQL</span><span class="mx">·</span>
+      <span>Docker</span><span class="mx">·</span>
+      <span>Vercel</span><span class="mx">·</span>
+      <span>Supabase</span><span class="mx">·</span>
+      <!-- duplicate for infinite loop -->
+      <span>Next.js</span><span class="mx">·</span>
+      <span>Node.js</span><span class="mx">·</span>
+      <span>Python</span><span class="mx">·</span>
+      <span>n8n</span><span class="mx">·</span>
+      <span>Make</span><span class="mx">·</span>
+      <span>Zapier</span><span class="mx">·</span>
+      <span>REST APIs</span><span class="mx">·</span>
+      <span>WebSockets</span><span class="mx">·</span>
+      <span>PostgreSQL</span><span class="mx">·</span>
+      <span>Docker</span><span class="mx">·</span>
+      <span>Vercel</span><span class="mx">·</span>
+      <span>Supabase</span><span class="mx">·</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner">
+
+      <!-- Left: photo -->
+      <div class="about-photo-wrap">
+        <div class="about-photo" id="aboutPhoto">
+          <!-- Replace src with your photo path, e.g. src="profile.jpg" -->
+          <img
+            src=""
+            alt="Rispo — profile photo"
+            class="about-img"
+            id="aboutImg"
+            onerror="this.style.display='none'"
+          />
+          <!-- Shown when no photo is set -->
+          <div class="about-photo-placeholder" id="photoPlaceholder">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+              <circle cx="26" cy="20" r="11" stroke="#00FF88" stroke-width="1.5"/>
+              <path d="M6 46c0-11 9-18 20-18s20 7 20 18" stroke="#00FF88" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>photo coming soon</span>
+          </div>
+          <div class="about-photo-frame" aria-hidden="true"></div>
+        </div>
+        <!-- Terminal-style bio badge -->
+        <div class="about-terminal">
+          <span class="about-terminal-prompt">~</span>
+          <span class="about-terminal-text">whoami</span>
+          <br />
+          <span class="about-terminal-output">rispo@dz:~$ <em>19y · Algeria · Coder</em></span>
+        </div>
+      </div>
+
+      <!-- Right: text content -->
+      <div class="about-content">
+        <span class="section-tag">// about me</span>
+        <h2 class="about-title">Hey, I'm <em>Rispo</em>.</h2>
+
+        <p class="about-lead">
+          A 19-year-old self-taught developer from <strong>Algeria</strong> who fell in love
+          with building things on the internet.
+        </p>
+
+        <p class="about-body">
+          Most of my time is spent deep in terminals, browser DevTools,
+          and n8n canvases. I build websites that load fast and convert,
+          and automations that run quietly in the background —
+          handling the repetitive, the tedious, the time-consuming —
+          so people can focus on what actually matters.
+        </p>
+
+        <p class="about-body">
+          My toolkit spans JavaScript, Python, and C++, but tools are secondary.
+          What I'm really after is the outcome: workflows that save hours every week,
+          systems that scale without breaking, and code that does exactly what it promises.
+        </p>  
+
+        <p class="about-body">
+          I'm always learning, always experimenting
+          — from late-night side projects to real client deliveries.
+          If it can be built, I want to build it.
+        </p> 
+
+        <div class="about-tags">
+          <span class="about-tag">🇩🇿 Algeria</span>
+          <span class="about-tag">⚡ Age 19</span>
+          <span class="about-tag">💻 Full-stack</span>
+          <span class="about-tag">🤖 Automation</span>
+          <span class="about-tag">🔁 Workflows</span>
+          <span class="about-tag">🌐 Freelancer</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <span class="section-tag">// services</span>
+      <h2 class="section-title">What I Build</h2>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card" id="serviceWebsites">
+        <div class="service-num">01</div>
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="2" y="4" width="28" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M2 10h28" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="7" r="1" fill="currentColor"/><circle cx="11" cy="7" r="1" fill="currentColor"/><circle cx="15" cy="7" r="1" fill="currentColor"/><path d="M8 16l4 4 8-8" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="service-title">Websites</h3>
+        <p class="service-desc">High-performance landing pages, portfolios, SaaS frontends and full-stack web apps that convert visitors into customers.</p>
+        <ul class="service-list">
+          <li>Landing pages & portfolios</li>
+          <li>SaaS dashboards</li>
+          <li>E-commerce storefronts</li>
+          <li>Custom CMS integrations</li>
+        </ul>
+        <div class="service-arrow">→</div>
+      </article>
+
+      <article class="service-card featured" id="serviceWorkflows">
+        <div class="service-num">02</div>
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="6" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="26" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="26" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M9 16h4M19 16h4M16 9v4M16 19v4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="service-title">Workflows</h3>
+        <p class="service-desc">Intelligent process orchestration connecting your tools, teams and data so nothing falls through the cracks.</p>
+        <ul class="service-list">
+          <li>n8n & Make flows</li>
+          <li>CRM & email automations</li>
+          <li>Multi-step pipelines</li>
+          <li>Real-time event triggers</li>
+        </ul>
+        <div class="service-arrow">→</div>
+      </article>
+
+      <article class="service-card" id="serviceAutomations">
+        <div class="service-num">03</div>
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 3v5M16 24v5M3 16h5M24 16h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="16" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M13 16l2 2 4-4" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="service-title">Automations</h3>
+        <p class="service-desc">Custom bots and scripts that run 24/7, handling repetitive tasks so you can focus on what actually matters.</p>
+        <ul class="service-list">
+          <li>API integrations</li>
+          <li>Data scraping & sync</li>
+          <li>Scheduled jobs & bots</li>
+          <li>Webhook orchestration</li>
+        </ul>
+        <div class="service-arrow">→</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORK / PROJECTS -->
+  <section class="work" id="work">
+    <div class="section-header">
+      <span class="section-tag">// selected work</span>
+      <h2 class="section-title">Recent Projects</h2>
+    </div>
+
+    <div class="projects-list">
+      <a href="projects/lead-engine-pro.html" class="project-row" id="proj1">
+        <div class="proj-meta">
+          <span class="proj-num">001</span>
+          <span class="proj-tag">Automation</span>
+        </div>
+        <div class="proj-info">
+          <h3 class="proj-title">Lead Engine Pro</h3>
+          <p class="proj-desc">Automated lead capture → CRM sync → email sequence → Slack alerts. Zero manual input.</p>
+        </div>
+        <div class="proj-tech">
+          <span>n8n</span><span>HubSpot API</span><span>Resend</span>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </a>
+
+      <a href="projects/saas-dashboard.html" class="project-row" id="proj2">
+        <div class="proj-meta">
+          <span class="proj-num">002</span>
+          <span class="proj-tag">Website</span>
+        </div>
+        <div class="proj-info">
+          <h3 class="proj-title">SaaS Dashboard</h3>
+          <p class="proj-desc">Full-stack analytics dashboard with real-time charts, role-based auth and custom REST API.</p>
+        </div>
+        <div class="proj-tech">
+          <span>Next.js</span><span>Supabase</span><span>Recharts</span>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </a>
+
+      <a href="projects/invoice-autopilot.html" class="project-row" id="proj3">
+        <div class="proj-meta">
+          <span class="proj-num">003</span>
+          <span class="proj-tag">Workflow</span>
+        </div>
+        <div class="proj-info">
+          <h3 class="proj-title">Invoice Autopilot</h3>
+          <p class="proj-desc">End-to-end billing flow: contract sign → invoice gen → payment tracking → accounting sync.</p>
+        </div>
+        <div class="proj-tech">
+          <span>Make</span><span>Stripe</span><span>Notion</span>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </a>
+
+      <a href="projects/agency-landing.html" class="project-row" id="proj4">
+        <div class="proj-meta">
+          <span class="proj-num">004</span>
+          <span class="proj-tag">Website</span>
+        </div>
+        <div class="proj-info">
+          <h3 class="proj-title">Agency Landing Page</h3>
+          <p class="proj-desc">Conversion-focused landing page. 98 Lighthouse score, sub-1s LCP, animated without libraries.</p>
+        </div>
+        <div class="proj-tech">
+          <span>HTML/CSS</span><span>GSAP</span><span>Vercel</span>
+        </div>
+        <div class="proj-arrow">↗</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="section-header">
+      <span class="section-tag">// how it works</span>
+      <h2 class="section-title">The Process</h2>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step" id="step1">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Discovery Call</h3>
+          <p>30 minutes. We map your problem, your stack, and the outcome you actually need.</p>
+        </div>
+      </div>
+      <div class="process-connector" aria-hidden="true">
+        <div class="connector-line"></div>
+      </div>
+      <div class="process-step" id="step2">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Scoped Proposal</h3>
+          <p>Clear deliverables, timeline, and fixed price. No vague estimates.</p>
+        </div>
+      </div>
+      <div class="process-connector" aria-hidden="true">
+        <div class="connector-line"></div>
+      </div>
+      <div class="process-step" id="step3">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Build & Iterate</h3>
+          <p>You get progress updates, a staging environment, and real input at every stage.</p>
+        </div>
+      </div>
+      <div class="process-connector" aria-hidden="true">
+        <div class="connector-line"></div>
+      </div>
+      <div class="process-step" id="step4">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Ship & Support</h3>
+          <p>Launch day + documentation + 30-day post-launch support included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <span class="contact-tag">// ready to build?</span>
+      <h2 class="contact-title">
+        Let's turn your<br />idea into<br /><em>working software.</em>
+      </h2>
+      <p class="contact-sub">Drop me a message and I'll get back within 24 hours.</p>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nameInput">Name</label>
+            <input type="text" id="nameInput" name="name" placeholder="Your name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input type="email" id="emailInput" name="email" placeholder="your@email.com" autocomplete="email" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="projectInput">Let's build something!</label>
+          <textarea id="projectInput" name="project" rows="4" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span class="btn-submit-text">Send Message</span>
+          <span class="btn-submit-arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span class="footer-logo">./Rispo</span>
+      <span class="footer-copy">© 2026 — Built with intention</span>
+    </div>
+    <div class="footer-right">
+      <a href="#" class="footer-link" aria-label="GitHub">GitHub</a>
+      <a href="#" class="footer-link" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" class="footer-link" aria-label="Twitter">Twitter</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

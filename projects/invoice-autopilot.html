@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice Autopilot — Rispo</title>
+  <meta name="description" content="End-to-end billing automation: contract sign → invoice gen → payment tracking → accounting sync." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <nav class="proj-page-nav" id="projNav">
+    <a href="../index.html#work" class="proj-back">← back to work</a>
+    <a href="../index.html" class="proj-page-nav-logo"><span style="color:var(--accent)">~</span>./Rispo</a>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-hero-eyebrow">
+      <span class="proj-hero-num">003</span>
+      <span class="proj-hero-tag">Workflow</span>
+    </div>
+    <h1 class="proj-hero-title">Invoice <em>Autopilot</em></h1>
+    <p class="proj-hero-tagline">
+      A complete billing workflow that runs itself — a client signs a contract and from
+      that moment, every step of the invoicing, payment tracking and accounting process
+      happens automatically. No chasing, no copy-pasting, no forgotten follow-ups.
+    </p>
+  </section>
+
+  <div class="proj-video-wrap">
+    <div class="proj-video-frame" id="videoFrame3" role="button" tabindex="0" aria-label="Watch project demo">
+      <span class="proj-video-label">// demo</span>
+      <div class="proj-video-scanlines"></div>
+      <!--
+        TO ADD VIDEO: replace the empty src below with your file name, e.g.:
+          src="videos/invoice-autopilot-demo.mp4"
+      -->
+      <video id="projVideo3" src="" controls preload="none"></video>
+      <div class="proj-video-play">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <p class="proj-video-caption">Workflow walkthrough — <em>add video to reveal</em></p>
+      <div class="proj-video-corner br">
+        <span class="proj-video-corner-dot"></span>
+        invoice-autopilot · Make
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-body">
+    <div class="proj-desc-col">
+      <span class="proj-desc-tag">// overview</span>
+      <h2 class="proj-desc-title">What it does</h2>
+
+      <p class="proj-desc-body">
+        Invoice Autopilot is a Make workflow that handles the entire post-sale billing
+        lifecycle. When a client signs a contract (via DocuSign or PandaDoc), the
+        workflow triggers automatically and takes it from there.
+      </p>
+      <p class="proj-desc-body">
+        It generates a branded PDF invoice, creates a Stripe payment link, sends the
+        invoice to the client by email, and creates a tracked record in Notion for the
+        team. If payment is late, it sends automated follow-up reminders on a schedule.
+        When payment lands, it confirms receipt to the client, updates the Notion tracker,
+        and logs the transaction.
+      </p>
+      <p class="proj-desc-body">
+        The whole flow touches seven different services and replaces what used to be
+        45+ minutes of manual admin per invoice — turning it into zero minutes.
+      </p>
+
+      <div class="proj-highlights">
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">📝</span>
+          <div class="proj-highlight-text">
+            <h4>Contract → invoice in one trigger</h4>
+            <p>A signed contract is the only input. Everything downstream — PDF generation, Stripe links, email — fires automatically.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">💳</span>
+          <div class="proj-highlight-text">
+            <h4>Stripe payment tracking</h4>
+            <p>Stripe webhooks feed payment status back into the workflow. Overdue? Automated reminder. Paid? Instant confirmation.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">📒</span>
+          <div class="proj-highlight-text">
+            <h4>Notion as the source of truth</h4>
+            <p>Every invoice, status update, and payment is logged to a structured Notion database — always up to date, always queryable.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">🔔</span>
+          <div class="proj-highlight-text">
+            <h4>Smart reminders, not spam</h4>
+            <p>Reminder cadence adapts to due date proximity. 7 days out: friendly nudge. 1 day out: urgent. Overdue: firm follow-up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Tech Stack</span>
+        <div class="proj-tech-stack">
+          <span class="proj-tech-badge">Make</span>
+          <span class="proj-tech-badge">Stripe</span>
+          <span class="proj-tech-badge">Notion API</span>
+          <span class="proj-tech-badge">DocuSign</span>
+          <span class="proj-tech-badge">Resend</span>
+          <span class="proj-tech-badge">PDF.co</span>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Key Metrics</span>
+        <div class="proj-metrics">
+          <div>
+            <div class="proj-metric-value">45min</div>
+            <div class="proj-metric-label">admin time saved per invoice</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">7</div>
+            <div class="proj-metric-label">services connected</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">0</div>
+            <div class="proj-metric-label">missed follow-ups since launch</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Project Details</span>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Category</span>
+          <span class="proj-sidebar-row-value">Business Automation</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Platform</span>
+          <span class="proj-sidebar-row-value">Make (Integromat)</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Status</span>
+          <span class="proj-sidebar-row-value"><span class="proj-status-dot"></span>Live</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Build time</span>
+          <span class="proj-sidebar-row-value">~5 days</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="proj-outcomes">
+    <h2 class="proj-outcomes-title">What this delivered</h2>
+    <div class="proj-outcomes-grid">
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">⏱️</div>
+        <h4>45 min → 0 min</h4>
+        <p>Every invoice that used to take 45 minutes of copy-paste admin now takes zero. The flow runs itself.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">💰</div>
+        <h4>Faster payment collection</h4>
+        <p>Automated reminders reduced average payment delay from 12 days to under 4. Cash flow improved immediately.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">🗂️</div>
+        <h4>Perfect record keeping</h4>
+        <p>Every invoice lives in Notion with its full history. Auditing, filtering, and reporting became trivial.</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="proj-nav-footer" aria-label="Project navigation">
+    <a href="saas-dashboard.html" class="proj-nav-btn">
+      <span class="proj-nav-btn-hint">← previous</span>
+      <span class="proj-nav-btn-title">SaaS Dashboard</span>
+    </a>
+    <a href="agency-landing.html" class="proj-nav-btn next">
+      <span class="proj-nav-btn-hint">next →</span>
+      <span class="proj-nav-btn-title">Agency Landing Page</span>
+    </a>
+  </nav>
+  <a href="../index.html#work" class="proj-all-link">↑ view all projects</a>
+
+  <script>
+    const nav = document.getElementById('projNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), {passive:true});
+    const video = document.getElementById('projVideo3');
+    const frame = document.getElementById('videoFrame3');
+    const play  = frame.querySelector('.proj-video-play');
+    const cap   = frame.querySelector('.proj-video-caption');
+    if (video && video.src && !video.src.endsWith('/') && !video.src.endsWith('#')) {
+      video.style.display = 'block'; play.style.display = 'none'; cap.style.display = 'none';
+    }
+    frame.addEventListener('click', () => { if (video.style.display === 'block') { video.paused ? video.play() : video.pause(); } });
+  </script>
+</body>
+</html>

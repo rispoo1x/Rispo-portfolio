@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaaS Dashboard — Rispo</title>
+  <meta name="description" content="Full-stack analytics dashboard with real-time charts, role-based auth and a custom REST API." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <nav class="proj-page-nav" id="projNav">
+    <a href="../index.html#work" class="proj-back">← back to work</a>
+    <a href="../index.html" class="proj-page-nav-logo"><span style="color:var(--accent)">~</span>./Rispo</a>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-hero-eyebrow">
+      <span class="proj-hero-num">002</span>
+      <span class="proj-hero-tag">Website</span>
+    </div>
+    <h1 class="proj-hero-title">SaaS <em>Dashboard</em></h1>
+    <p class="proj-hero-tagline">
+      A full-stack analytics platform with real-time data visualisation, multi-role
+      authentication, and a custom REST API — built to scale from day one and perform
+      without reaching for a third-party charting service.
+    </p>
+  </section>
+
+  <div class="proj-video-wrap">
+    <div class="proj-video-frame" id="videoFrame2" role="button" tabindex="0" aria-label="Watch project demo">
+      <span class="proj-video-label">// demo</span>
+      <div class="proj-video-scanlines"></div>
+      <!--
+        TO ADD VIDEO: replace the empty src below with your file name, e.g.:
+          src="videos/saas-dashboard-demo.mp4"
+      -->
+      <video id="projVideo2" src="" controls preload="none"></video>
+      <div class="proj-video-play">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <p class="proj-video-caption">Dashboard walkthrough — <em>add video to reveal</em></p>
+      <div class="proj-video-corner br">
+        <span class="proj-video-corner-dot"></span>
+        saas-dashboard · Next.js
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-body">
+    <div class="proj-desc-col">
+      <span class="proj-desc-tag">// overview</span>
+      <h2 class="proj-desc-title">What it does</h2>
+
+      <p class="proj-desc-body">
+        A production-grade SaaS analytics dashboard built on Next.js App Router with
+        Supabase as the backend. The entire data layer is a custom REST API — no
+        abstraction-heavy ORM magic, just clean SQL and typed responses.
+      </p>
+      <p class="proj-desc-body">
+        The dashboard supports multiple user roles: admins see everything, team members
+        see only their data, and guests get read-only snapshots. Auth is handled through
+        Supabase Auth with Row Level Security policies enforced at the database level —
+        not just in the frontend.
+      </p>
+      <p class="proj-desc-body">
+        Charts update in real time using Supabase Realtime subscriptions. No polling,
+        no full-page reloads — data streams directly into the Recharts components
+        as it lands in the database.
+      </p>
+
+      <div class="proj-highlights">
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">📡</span>
+          <div class="proj-highlight-text">
+            <h4>Real-time data streaming</h4>
+            <p>Supabase Realtime pushes database changes directly to the UI. Charts update live without a single network request.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">🔐</span>
+          <div class="proj-highlight-text">
+            <h4>Row-level security</h4>
+            <p>Data access is enforced at the Postgres level with RLS policies — not just UI conditionals. No privilege escalation possible.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">⚙️</span>
+          <div class="proj-highlight-text">
+            <h4>Custom REST API</h4>
+            <p>Every endpoint is hand-built with Next.js API routes: typed request/response, pagination, filtering, and rate limits.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">📱</span>
+          <div class="proj-highlight-text">
+            <h4>Fully responsive</h4>
+            <p>The dashboard adapts to any screen — charts reflow, tables collapse to cards, and sidebars become bottom sheets on mobile.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Tech Stack</span>
+        <div class="proj-tech-stack">
+          <span class="proj-tech-badge">Next.js</span>
+          <span class="proj-tech-badge">Supabase</span>
+          <span class="proj-tech-badge">Recharts</span>
+          <span class="proj-tech-badge">TypeScript</span>
+          <span class="proj-tech-badge">Postgres</span>
+          <span class="proj-tech-badge">Vercel</span>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Key Metrics</span>
+        <div class="proj-metrics">
+          <div>
+            <div class="proj-metric-value">&lt; 1s</div>
+            <div class="proj-metric-label">initial page load (LCP)</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">3</div>
+            <div class="proj-metric-label">user role levels</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">0ms</div>
+            <div class="proj-metric-label">polling delay (realtime)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Project Details</span>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Category</span>
+          <span class="proj-sidebar-row-value">Full-stack Web App</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Rendering</span>
+          <span class="proj-sidebar-row-value">SSR + Client Streaming</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Status</span>
+          <span class="proj-sidebar-row-value"><span class="proj-status-dot"></span>Live</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Build time</span>
+          <span class="proj-sidebar-row-value">~2 weeks</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="proj-outcomes">
+    <h2 class="proj-outcomes-title">What this delivered</h2>
+    <div class="proj-outcomes-grid">
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">📊</div>
+        <h4>Live insights</h4>
+        <p>Teams stopped waiting for weekly reports. Data updates hit the dashboard the instant they're written to the DB.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">🛡️</div>
+        <h4>Secure by default</h4>
+        <p>RLS policies mean even a compromised frontend token can't expose data it shouldn't. Security is in the database itself.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">📈</div>
+        <h4>Scales with the business</h4>
+        <p>The API layer is stateless and edge-deployed. Adding new metrics is a single endpoint + one chart component.</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="proj-nav-footer" aria-label="Project navigation">
+    <a href="lead-engine-pro.html" class="proj-nav-btn">
+      <span class="proj-nav-btn-hint">← previous</span>
+      <span class="proj-nav-btn-title">Lead Engine Pro</span>
+    </a>
+    <a href="invoice-autopilot.html" class="proj-nav-btn next">
+      <span class="proj-nav-btn-hint">next →</span>
+      <span class="proj-nav-btn-title">Invoice Autopilot</span>
+    </a>
+  </nav>
+  <a href="../index.html#work" class="proj-all-link">↑ view all projects</a>
+
+  <script>
+    const nav = document.getElementById('projNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), {passive:true});
+    const video = document.getElementById('projVideo2');
+    const frame = document.getElementById('videoFrame2');
+    const play  = frame.querySelector('.proj-video-play');
+    const cap   = frame.querySelector('.proj-video-caption');
+    if (video && video.src && !video.src.endsWith('/') && !video.src.endsWith('#')) {
+      video.style.display = 'block'; play.style.display = 'none'; cap.style.display = 'none';
+    }
+    frame.addEventListener('click', () => { if (video.style.display === 'block') { video.paused ? video.play() : video.pause(); } });
+  </script>
+</body>
+</html>

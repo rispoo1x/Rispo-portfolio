@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agency Landing Page — Rispo</title>
+  <meta name="description" content="Conversion-focused landing page. 98 Lighthouse score, sub-1s LCP, smooth animations without a single library." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <nav class="proj-page-nav" id="projNav">
+    <a href="../index.html#work" class="proj-back">← back to work</a>
+    <a href="../index.html" class="proj-page-nav-logo"><span style="color:var(--accent)">~</span>./Rispo</a>
+  </nav>
+
+  <section class="proj-hero">
+    <div class="proj-hero-eyebrow">
+      <span class="proj-hero-num">004</span>
+      <span class="proj-hero-tag">Website</span>
+    </div>
+    <h1 class="proj-hero-title">Agency <em>Landing Page</em></h1>
+    <p class="proj-hero-tagline">
+      A conversion-focused landing page built for a creative agency — 98 Lighthouse score,
+      sub-1s LCP, smooth entrance animations, and not a single animation library in sight.
+      Pure HTML, CSS, and vanilla JavaScript.
+    </p>
+  </section>
+
+  <div class="proj-video-wrap">
+    <div class="proj-video-frame" id="videoFrame4" role="button" tabindex="0" aria-label="Watch project demo">
+      <span class="proj-video-label">// demo</span>
+      <div class="proj-video-scanlines"></div>
+      <!--
+        TO ADD VIDEO: replace the empty src below with your file name, e.g.:
+          src="videos/agency-landing-demo.mp4"
+      -->
+      <video id="projVideo4" src="" controls preload="none"></video>
+      <div class="proj-video-play">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <p class="proj-video-caption">Page walkthrough — <em>add video to reveal</em></p>
+      <div class="proj-video-corner br">
+        <span class="proj-video-corner-dot"></span>
+        agency-landing · HTML/CSS/JS
+      </div>
+    </div>
+  </div>
+
+  <div class="proj-body">
+    <div class="proj-desc-col">
+      <span class="proj-desc-tag">// overview</span>
+      <h2 class="proj-desc-title">What it does</h2>
+
+      <p class="proj-desc-body">
+        Built for a creative agency that needed a landing page that would actually
+        convert — not just look good in Figma. The brief was: fast, memorable,
+        and built entirely without frameworks or libraries.
+      </p>
+      <p class="proj-desc-body">
+        Every animation on the page is driven by CSS transitions and the
+        Intersection Observer API. Entrance sequences, scroll-triggered reveals,
+        hover effects — all native. The result is a page that loads in under
+        a second and runs at 60fps on any device.
+      </p>
+      <p class="proj-desc-body">
+        The copy and layout were designed around a single conversion goal: get
+        visitors to book a discovery call. Every section, every heading, every
+        button was written and positioned with that in mind. The call-to-action
+        appears in the viewport within 2 seconds of landing.
+      </p>
+
+      <div class="proj-highlights">
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">🏎️</span>
+          <div class="proj-highlight-text">
+            <h4>98 Lighthouse performance score</h4>
+            <p>No JavaScript frameworks, no render-blocking resources, no layout shifts. The page is as fast as a page can get.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">✨</span>
+          <div class="proj-highlight-text">
+            <h4>Zero animation libraries</h4>
+            <p>Every motion effect is CSS + Intersection Observer. No GSAP bundle, no Framer Motion — nothing to download, nothing to parse.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">🎯</span>
+          <div class="proj-highlight-text">
+            <h4>Conversion-first layout</h4>
+            <p>Structure, copy and visual hierarchy were all designed around a single goal: booking a call. Every element earns its place.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">🌍</span>
+          <div class="proj-highlight-text">
+            <h4>Deployed to the edge</h4>
+            <p>Hosted on Vercel with global CDN distribution. Sub-100ms TTFB from anywhere in the world thanks to edge functions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Tech Stack</span>
+        <div class="proj-tech-stack">
+          <span class="proj-tech-badge">HTML5</span>
+          <span class="proj-tech-badge">CSS3</span>
+          <span class="proj-tech-badge">Vanilla JS</span>
+          <span class="proj-tech-badge">Vercel</span>
+          <span class="proj-tech-badge">IntersectionObserver</span>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Performance</span>
+        <div class="proj-metrics">
+          <div>
+            <div class="proj-metric-value">98</div>
+            <div class="proj-metric-label">Lighthouse score</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">&lt; 1s</div>
+            <div class="proj-metric-label">LCP (Largest Contentful Paint)</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">0</div>
+            <div class="proj-metric-label">layout shifts (CLS = 0)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Project Details</span>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Category</span>
+          <span class="proj-sidebar-row-value">Marketing / Web</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Dependencies</span>
+          <span class="proj-sidebar-row-value">Zero runtime libraries</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Status</span>
+          <span class="proj-sidebar-row-value"><span class="proj-status-dot"></span>Live</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Build time</span>
+          <span class="proj-sidebar-row-value">~4 days</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="proj-outcomes">
+    <h2 class="proj-outcomes-title">What this delivered</h2>
+    <div class="proj-outcomes-grid">
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">⚡</div>
+        <h4>Instant first impression</h4>
+        <p>Sub-1s load time means visitors see content before they even consciously register the page is loading. No bounce from slow loads.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">📞</div>
+        <h4>Higher booking rate</h4>
+        <p>Conversion-first copy and a clear visual hierarchy pushed the CTA into view fast. Discovery call bookings increased significantly.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">🔧</div>
+        <h4>Dead simple to maintain</h4>
+        <p>No build pipeline, no dependencies to update, no framework to migrate. The client can edit the HTML directly if they want.</p>
+      </div>
+    </div>
+  </div>
+
+  <nav class="proj-nav-footer" aria-label="Project navigation">
+    <a href="invoice-autopilot.html" class="proj-nav-btn">
+      <span class="proj-nav-btn-hint">← previous</span>
+      <span class="proj-nav-btn-title">Invoice Autopilot</span>
+    </a>
+    <a href="lead-engine-pro.html" class="proj-nav-btn next">
+      <span class="proj-nav-btn-hint">next →</span>
+      <span class="proj-nav-btn-title">Lead Engine Pro</span>
+    </a>
+  </nav>
+  <a href="../index.html#work" class="proj-all-link">↑ view all projects</a>
+
+  <script>
+    const nav = document.getElementById('projNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), {passive:true});
+    const video = document.getElementById('projVideo4');
+    const frame = document.getElementById('videoFrame4');
+    const play  = frame.querySelector('.proj-video-play');
+    const cap   = frame.querySelector('.proj-video-caption');
+    if (video && video.src && !video.src.endsWith('/') && !video.src.endsWith('#')) {
+      video.style.display = 'block'; play.style.display = 'none'; cap.style.display = 'none';
+    }
+    frame.addEventListener('click', () => { if (video.style.display === 'block') { video.paused ? video.play() : video.pause(); } });
+  </script>
+</body>
+</html>

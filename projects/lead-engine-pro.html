@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Engine Pro — Rispo</title>
+  <meta name="description" content="Automated lead capture pipeline: form → CRM → email sequence → Slack alerts with zero manual input." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="grid-lines" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="proj-page-nav" id="projNav">
+    <a href="../index.html#work" class="proj-back">← back to work</a>
+    <a href="../index.html" class="proj-page-nav-logo">
+      <span style="color:var(--accent)">~</span>./Rispo
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="proj-hero">
+    <div class="proj-hero-eyebrow">
+      <span class="proj-hero-num">001</span>
+      <span class="proj-hero-tag">Automation</span>
+    </div>
+    <h1 class="proj-hero-title">Lead Engine <em>Pro</em></h1>
+    <p class="proj-hero-tagline">
+      A fully automated lead pipeline that captures, enriches, routes and notifies —
+      from the moment someone fills a form to the moment they're in your CRM with a
+      follow-up already queued. Zero manual steps.
+    </p>
+  </section>
+
+  <!-- VIDEO -->
+  <div class="proj-video-wrap">
+    <div class="proj-video-frame" id="videoFrame1" role="button" tabindex="0" aria-label="Watch project demo">
+      <span class="proj-video-label">// demo</span>
+      <div class="proj-video-scanlines"></div>
+      <!--
+        TO ADD VIDEO: replace the empty src below with your file name, e.g.:
+          src="videos/lead-engine-demo.mp4"
+        The play button / caption will then be hidden automatically.
+      -->
+      <video id="projVideo1" src="" controls preload="none"></video>
+      <div class="proj-video-play">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </div>
+      <p class="proj-video-caption">Project walkthrough — <em>add video to reveal</em></p>
+      <div class="proj-video-corner br">
+        <span class="proj-video-corner-dot"></span>
+        lead-engine-pro · n8n
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="proj-body">
+    <!-- Left: description -->
+    <div class="proj-desc-col">
+      <span class="proj-desc-tag">// overview</span>
+      <h2 class="proj-desc-title">What it does</h2>
+
+      <p class="proj-desc-body">
+        Lead Engine Pro is an end-to-end automation built entirely in n8n that eliminates
+        every manual step between a prospect filling out a form and a sales rep having a
+        fully enriched, ready-to-close lead in their CRM.
+      </p>
+      <p class="proj-desc-body">
+        The workflow triggers the instant a webhook fires from the lead form. It then
+        enriches the contact with public data, applies conditional logic to score and
+        route the lead, syncs everything to HubSpot, fires a personalised email sequence
+        via Resend, and pings the right Slack channel — all within seconds.
+      </p>
+      <p class="proj-desc-body">
+        Built to handle high volume without breaking. Every step has error handling,
+        retry logic, and a fallback notification so nothing silently disappears in the
+        middle of the night.
+      </p>
+
+      <div class="proj-highlights">
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">⚡</span>
+          <div class="proj-highlight-text">
+            <h4>Webhook-triggered in real time</h4>
+            <p>Fires the moment a form submits — no polling, no delays. Leads hit the CRM in under 3 seconds.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">🧠</span>
+          <div class="proj-highlight-text">
+            <h4>Smart lead scoring &amp; routing</h4>
+            <p>Conditional branches score each lead by source, company size, and intent signals — routing to the right rep automatically.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">📧</span>
+          <div class="proj-highlight-text">
+            <h4>Personalised email sequences</h4>
+            <p>Resend fires a dynamic multi-step sequence tailored per lead score. No template blasting — real personalisation.</p>
+          </div>
+        </div>
+        <div class="proj-highlight">
+          <span class="proj-highlight-icon">🔁</span>
+          <div class="proj-highlight-text">
+            <h4>Full error recovery</h4>
+            <p>Every node has retry logic and a fallback path. A dead API never kills the whole pipeline — it just reroutes and logs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: sidebar -->
+    <aside class="proj-sidebar">
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Tech Stack</span>
+        <div class="proj-tech-stack">
+          <span class="proj-tech-badge">n8n</span>
+          <span class="proj-tech-badge">HubSpot API</span>
+          <span class="proj-tech-badge">Resend</span>
+          <span class="proj-tech-badge">Slack API</span>
+          <span class="proj-tech-badge">Webhooks</span>
+          <span class="proj-tech-badge">JSON</span>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Key Metrics</span>
+        <div class="proj-metrics">
+          <div>
+            <div class="proj-metric-value">&lt; 3s</div>
+            <div class="proj-metric-label">lead-to-CRM time</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">100%</div>
+            <div class="proj-metric-label">zero manual input</div>
+          </div>
+          <div class="proj-sidebar-divider"></div>
+          <div>
+            <div class="proj-metric-value">8h+</div>
+            <div class="proj-metric-label">saved per week</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-sidebar-card">
+        <span class="proj-sidebar-label">Project Details</span>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Category</span>
+          <span class="proj-sidebar-row-value">Automation / CRM</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Platform</span>
+          <span class="proj-sidebar-row-value">n8n (self-hosted)</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Status</span>
+          <span class="proj-sidebar-row-value"><span class="proj-status-dot"></span>Live</span>
+        </div>
+        <div class="proj-sidebar-row">
+          <span class="proj-sidebar-row-label">Build time</span>
+          <span class="proj-sidebar-row-value">~3 days</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- OUTCOMES -->
+  <div class="proj-outcomes">
+    <h2 class="proj-outcomes-title">What this delivered</h2>
+    <div class="proj-outcomes-grid">
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">🚀</div>
+        <h4>Instant lead intake</h4>
+        <p>Leads go from form submission to CRM-enriched contact in under 3 seconds. No batching, no waiting.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">💸</div>
+        <h4>Revenue recovered</h4>
+        <p>No lead slips through the cracks anymore. Every submission is tracked, scored, and followed up automatically.</p>
+      </div>
+      <div class="proj-outcome-card">
+        <div class="proj-outcome-icon">📊</div>
+        <h4>Full pipeline visibility</h4>
+        <p>Slack alerts keep the team informed in real time — new leads, errors, and status changes surface immediately.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREV / NEXT -->
+  <nav class="proj-nav-footer" aria-label="Project navigation">
+    <a href="agency-landing.html" class="proj-nav-btn">
+      <span class="proj-nav-btn-hint">← previous</span>
+      <span class="proj-nav-btn-title">Agency Landing Page</span>
+    </a>
+    <a href="saas-dashboard.html" class="proj-nav-btn next">
+      <span class="proj-nav-btn-hint">next →</span>
+      <span class="proj-nav-btn-title">SaaS Dashboard</span>
+    </a>
+  </nav>
+  <a href="../index.html#work" class="proj-all-link">↑ view all projects</a>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('projNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), {passive:true});
+
+    // Video reveal logic
+    const video = document.getElementById('projVideo1');
+    const frame = document.getElementById('videoFrame1');
+    const play  = frame.querySelector('.proj-video-play');
+    const cap   = frame.querySelector('.proj-video-caption');
+
+    if (video && video.src && !video.src.endsWith('/') && !video.src.endsWith('#')) {
+      video.style.display = 'block';
+      play.style.display  = 'none';
+      cap.style.display   = 'none';
+    }
+    frame.addEventListener('click', () => {
+      if (video.style.display === 'block') { video.paused ? video.play() : video.pause(); }
+    });
+  </script>
+</body>
+</html>
