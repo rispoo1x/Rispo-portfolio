@@ -35,6 +35,45 @@
   });
 
   /* ─────────────────────────────────────
+     1b. NAV ACTIVE SECTION INDICATOR
+  ───────────────────────────────────── */
+  const navLinkEls = document.querySelectorAll('.nav-link');
+  const sectionIds = ['about', 'services', 'work', 'process', 'contact'];
+
+  function setActiveLink(id) {
+    navLinkEls.forEach(link => {
+      const href = link.getAttribute('href');
+      link.classList.toggle('active', href === '#' + id);
+    });
+  }
+
+  // Set active on click immediately
+  navLinkEls.forEach(link => {
+    link.addEventListener('click', () => {
+      const id = link.getAttribute('href').replace('#', '');
+      setActiveLink(id);
+    });
+  });
+
+  // Scroll-based section tracking — finds whichever section is at/past the trigger point
+  function updateActiveSection() {
+    const triggerY = window.scrollY + window.innerHeight * 0.25; // 25% from top of viewport
+    let currentId = sectionIds[0];
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top + window.scrollY <= triggerY) {
+        currentId = id;
+      }
+    });
+
+    setActiveLink(currentId);
+  }
+
+  window.addEventListener('scroll', updateActiveSection, { passive: true });
+  updateActiveSection(); // run on load
+
+  /* ─────────────────────────────────────
      2. TERMINAL TYPING — hero headline
   ───────────────────────────────────── */
   const words = [

@@ -133,6 +133,8 @@ ul { list-style: none; }
 }
 .nav-link:hover { color: var(--text); }
 .nav-link:hover::after { right: 0; }
+.nav-link.active { color: var(--text); }
+.nav-link.active::after { right: 0; }
 
 .nav-cta {
   font-family: var(--font-mono);
