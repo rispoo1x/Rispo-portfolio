@@ -1070,12 +1070,19 @@ ul { list-style: none; }
 
 @media (max-width: 860px) {
   .nav { padding: 1.25rem 1.5rem; }
+  .nav-logo {
+    position: relative;
+    z-index: 100;
+  }
   .nav-links { display: none; }
   .nav-links.open {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: var(--bg);
     align-items: center;
     justify-content: center;
@@ -1084,7 +1091,11 @@ ul { list-style: none; }
   }
   .nav-links.open .nav-link,
   .nav-links.open .nav-cta { font-size: 1.2rem; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { 
+    display: flex; 
+    position: relative;
+    z-index: 100;
+  }
 
   .hero {
     grid-template-columns: 1fr;
