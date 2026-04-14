@@ -178,7 +178,7 @@
      5. COUNTER ANIMATION — hero stats
   ───────────────────────────────────── */
   const statNums = $$('.stat-num');
-  // Match the stat numbers in the HTML (12+, 100%, 5)
+  // Match the stat numbers in the HTML (12+, 8+, 5)
   const targets = [12, 8, 5];
 
   let countersStarted = false;
